@@ -97,11 +97,11 @@ Flotr.addType('candles', {
           context.moveTo(x, Math.floor(top + width));
           context.lineTo(x, Math.floor(bottom + width));
           
-          y = Math.floor(open + width) + 0.5;
+          y = Math.floor(yScale(open) + width) + 0.5;
           context.moveTo(Math.floor(left) + pixelOffset, y);
           context.lineTo(x, y);
           
-          y = Math.floor(close + width) + 0.5;
+          y = Math.floor(yScale(close) + width) + 0.5;
           context.moveTo(Math.floor(right) + pixelOffset, y);
           context.lineTo(x, y);
         } else {
